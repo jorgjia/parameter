@@ -7,10 +7,10 @@ app.use(express.static('public'));
 app.get("/alcohol/:age", function(req, res) {
 	
 	if (Number(req.params.age)) {
-		if (Number(req.params.age) >= 18) message = "You can drink alcohol.";
+		if (Number(req.params.age) >= 21) message = "You can drink alcohol.";
 		else message = "You cannot drink.";
 	}
-	else msg = "enter age.";
+	else message = "enter age.";
 	
 	res.send(message);
 	
@@ -19,7 +19,7 @@ app.get("/alcohol/:age", function(req, res) {
 app.get("/drive/:age", function(req, res) {
 	
 	if (Number(req.params.age)) {
-		if (Number(req.params.age) >= 18) message = "You can drive a car.";
+		if (Number(req.params.age) >= 16) message = "You can drive a car.";
 		else message = "You cannot drive a car.";
 	}
 	else message = "enter age.";
@@ -31,7 +31,7 @@ app.get("/drive/:age", function(req, res) {
 app.get("/vote/:age", function(req, res) {
 	
 	if (Number(req.params.age)) {
-		if (Number(req.params.age) >= 18) msg = "You can vote.";
+		if (Number(req.params.age) >= 18) message = "You can vote.";
 		else message = "You cannot vote.";
 	}
 	else message = "Please enter a correct age.";

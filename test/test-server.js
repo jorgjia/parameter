@@ -12,7 +12,7 @@ describe("Testing URL parameter exercise (drive, alcohol and drink)", function()
 		chai.request(app)
 			.get("/vote/18")
 			.end(function(err, res) {
-				res.text.should.equal('You can vote now.');
+				res.text.should.equal('You can vote.');
 				done();
 			});
 	});
